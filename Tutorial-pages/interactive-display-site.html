@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Interactive CSS Display Demo</title>
+        <style>
+            body {
+                font-family: monospace;
+            }
+
+            hr {
+                border: 1px solid darkgrey;
+                margin: 10px 40px;
+            }
+
+            #block-para {
+                display: block;
+                width: 100px;
+                height: 100px;
+                color: white;
+                background-color: red;
+            }
+
+            #inline-para {
+                display: inline;
+                width: 100px;
+                height: 30px;
+                color: white;
+                background-color: green;
+            }
+
+            #inline-block-para {
+                display: inline-block;
+                width: 100px;
+                height: 100px;
+                color: white;
+                background-color: blue;
+            }
+
+            .input-group {
+                border: 3px solid darkgrey;
+                padding: 10px
+            }
+
+            .slider-group {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .label {
+                width: 150px;
+                font-weight: 900;
+            }
+
+            .slider {
+                flex-grow: 1;
+            }
+
+            .output {
+                width: 50px;
+                text-align: right;
+            }
+
+            .red {
+                color: red;
+            }
+
+            .green {
+                color: green;
+            }
+
+            .blue {
+                color: blue;
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <h1>CSS Display Propery Demonstartion</h1>
+        <p>Slide the sliders to see how different display properties affects the elements positioning on the page. </p>
+
+        <div class="input-group">
+            <div class="slider-group">
+                <label class="label red" for="block-height-slider">Block Height:</label>
+                <input class="slider" id="block-height-slider" type="range" min="10" max="1000" value="100">
+                <output class="output" id="block-height-output">100</output>
+            </div>
+            <div class="slider-group">
+                <label class="label red" for="block-width-slider">Block Width:</label>
+                <input class="slider" id="block-width-slider" type="range" min="10" max="1000" value="100">
+                <output class="output" id="block-width-output">100</output>
+            </div>
+
+            <hr>
+
+            <div class="slider-group">
+                <label class="label green" for="inline-height-slider">Inline Height:</label>
+                <input class="slider" id="inline-height-slider" type="range" min="10" max="1000" value="30">
+                <output class="output" id="inline-height-output">30</output>
+            </div>
+            <div class="slider-group">
+                <label class="label green" for="inline-width-slider">Inline Width:</label>
+                <input class="slider" id="inline-width-slider" type="range" min="10" max="1000" value="100">
+                <output class="output" id="inline-width-output">100</output>
+            </div>
+
+            <hr>
+
+            <div class="slider-group">
+                <label class="label blue" for="inline-block-height-slider">Inline Height:</label>
+                <input class="slider" id="inline-block-height-slider" type="range" min="10" max="1000" value="100">
+                <output class="output" id="inline-block-height-output">100</output>
+            </div>
+            <div class="slider-group">
+                <label class="label blue" for="inline-block-width-slider">Inline Width:</label>
+                <input class="slider" id="inline-block-width-slider" type="range" min="10" max="1000" value="100">
+                <output class="output" id="inline-block-width-output">100</output>
+            </div>
+        </div>
+
+        <p id="block-para">Block Paragraph</p>
+        <p id="inline-para">Inline Paragraph</p>
+        <p id="inline-block-para">Inline-Block Paragraph</p>
+
+        <div>
+            <a href="../index.html"><<< Return to main page</a>
+        </div>
+
+    </body>
+
+    <script>
+        // get the vars for the block paragraph
+        const BHSlider = document.getElementById("block-height-slider");
+        const BHSliderOutput = document.getElementById("block-height-output");
+        const BWSlider = document.getElementById("block-width-slider");
+        const BWSliderOutput = document.getElementById("block-width-output");
+        const blockParaElement = document.getElementById("block-para");
+
+        // assign an event listener for the block height slider
+        BHSlider.addEventListener("input", () => {
+            const heightValue = BHSlider.value + "px";
+            blockParaElement.style.height = heightValue;
+            BHSliderOutput.textContent = BHSlider.value;
+        });
+
+            // assign an event listener for the block width slider
+        BWSlider.addEventListener("input", () => {
+            const widthValue = BWSlider.value + "px";
+            blockParaElement.style.width = widthValue;
+            BWSliderOutput.textContent = BWSlider.value;
+        });
+
+        // get the vars for the inline paragraph
+        const ILHSlider = document.getElementById("inline-height-slider");
+        const ILHSliderOutput = document.getElementById("inline-height-output");
+        const ILWSlider = document.getElementById("inline-width-slider");
+        const ILWSliderOutput = document.getElementById("inline-width-output");
+        const inlineParaElement = document.getElementById("inline-para");
+
+        // assign an event listener for the inline height slider
+        ILHSlider.addEventListener("input", () => {
+            const heightValue = ILHSlider.value + "px";
+            inlineParaElement.style.height = heightValue;
+            ILHSliderOutput.textContent = ILHSlider.value;
+        });
+
+            // assign an event listener for the inline width slider
+            ILWSlider.addEventListener("input", () => {
+            const widthValue = ILWSlider.value + "px";
+            inlineParaElement.style.width = widthValue;
+            ILWSliderOutput.textContent = ILWSlider.value;
+        });
+
+        // get the vars for the inline-block paragraph
+        const ILBHSlider = document.getElementById("inline-block-height-slider");
+        const ILBHSliderOutput = document.getElementById("inline-block-height-output");
+        const ILBWSlider = document.getElementById("inline-block-width-slider");
+        const ILBWSliderOutput = document.getElementById("inline-block-width-output");
+        const inlineBlockParaElement = document.getElementById("inline-block-para");
+
+        // assign an event listener for the inline-block height slider
+        ILBHSlider.addEventListener("input", () => {
+            const heightValue = ILBHSlider.value + "px";
+            inlineBlockParaElement.style.height = heightValue;
+            ILBHSliderOutput.textContent = ILBHSlider.value;
+        });
+
+            // assign an event listener for the inline-block width slider
+            ILBWSlider.addEventListener("input", () => {
+            const widthValue = ILBWSlider.value + "px";
+            inlineBlockParaElement.style.width = widthValue;
+            ILBWSliderOutput.textContent = ILBWSlider.value;
+        });
+
+
+    </script>
+
+</html>
