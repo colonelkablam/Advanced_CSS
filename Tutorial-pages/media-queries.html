@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Media Queries</title>
+        <style>
+            body {
+                background-color: rgb(255, 0, 0);
+                min-width: 380px;
+            }
+
+            @media (min-width: 1601px) {
+                body {
+                    background-color: seagreen;
+                }
+            }
+
+            @media (min-width: 1201px) and (max-width: 1600px) {
+                body {
+                    background-color: limegreen;
+                }
+            }
+
+            @media (min-width: 481px) and (max-width: 1200px) {
+                body {
+                    background-color: powderblue;
+                }
+            }
+
+            @media (min-width: 320px) and (max-width: 480px) {
+                body {
+                    background-color: lightsalmon;
+                }
+            }
+
+            h1 {
+                text-align: center;
+            }
+
+            #main-box > h2 {
+                margin-left: 30px;
+            }
+            #main-box > p {
+                margin: 10px;
+            }
+
+            img {
+                float: left;
+                margin: 20px;
+            }
+
+
+            #main-box {
+                background-color: brown;
+                width: 800px;
+                margin: auto;
+            }
+
+            @media (max-width: 900px) {
+                #main-box {
+                    background-color: brown;
+                    width: 600px;
+                    margin: auto;
+                }
+            }
+
+            @media (max-width: 600px) {
+                #main-box {
+                    background-color: brown;
+                    width: 400px;
+                    margin: auto;
+                }
+            }
+
+
+        </style>
+    </head>
+
+    <body>
+        <main>
+            <div id="main-box">
+                <h1>Media Queries Demo</h1>
+                <h2>This will change width to fit into the browser window.</h2>
+                <img src="https://picsum.photos/id/166/200/200" alt="Scottish Highlands in cloud">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean auctor orci vel quam ultrices, sed sollicitudin tortor hendrerit. Mauris vel lacus sed nisl volutpat pellentesque sit amet nec ante. Cras sagittis lacinia ex, id lobortis est feugiat id. Mauris aliquet elit orci, nec accumsan turpis ullamcorper non. Vestibulum pellentesque tincidunt enim. In faucibus pellentesque odio, et elementum elit mattis et. Duis pulvinar id augue in sagittis. Nunc commodo turpis sit amet tellus ullamcorper maximus. Etiam accumsan tellus eu vestibulum eleifend. Praesent vel velit viverra, dictum est commodo, molestie velit. Ut ullamcorper, dui a hendrerit tempus, lacus risus fermentum ante, a imperdiet leo erat eget turpis. Aliquam vel arcu efficitur, egestas velit congue, malesuada quam. Morbi hendrerit malesuada magna et mollis.
+                </p>
+                <p>
+                    Mauris dapibus venenatis leo, in viverra sem malesuada in. Sed sodales dolor orci, vitae auctor massa molestie non. Duis ante libero, viverra quis scelerisque et, volutpat eget nisi. Nullam porta diam auctor fringilla fringilla. Integer eget dolor lacinia, lacinia nibh ultricies, volutpat velit. Vivamus efficitur ut neque sed accumsan. Suspendisse potenti. Pellentesque nibh metus, auctor eu convallis sit amet, volutpat at felis. Nam venenatis condimentum diam ut tristique. Pellentesque luctus tincidunt laoreet. Proin non tellus magna. Praesent at mi quam. Nam sit amet urna id lorem fermentum molestie. Etiam congue justo in mauris tincidunt tincidunt. Suspendisse dignissim dapibus nisi, quis euismod nisl volutpat vitae. Nunc lacinia gravida dui nec consequat.
+                </p>
+
+                <p>
+                    Nunc mollis ex in viverra faucibus. In hac habitasse platea dictumst. Sed sagittis nec ipsum at egestas. Curabitur eget nisl eleifend, placerat massa laoreet, maximus quam. Praesent nec lacus in massa blandit pharetra sed quis purus. Nam aliquam placerat augue, vel porta tortor sodales vitae. Aenean orci ligula, elementum ut viverra sed, fermentum at arcu. Sed sed orci et felis sodales malesuada eget ac tortor. Phasellus sagittis pretium felis vulputate iaculis.
+                </p>
+
+                <p>
+                    Nunc mollis ex in viverra faucibus. In hac habitasse platea dictumst. Sed sagittis nec ipsum at egestas. Curabitur eget nisl eleifend, placerat massa laoreet, maximus quam. Praesent nec lacus in massa blandit pharetra sed quis purus. Nam aliquam placerat augue, vel porta tortor sodales vitae. Aenean orci ligula, elementum ut viverra sed, fermentum at arcu. Sed sed orci et felis sodales malesuada eget ac tortor. Phasellus sagittis pretium felis vulputate iaculis.
+                </p>
+                    
+                <p>
+                    Mauris dapibus venenatis leo, in viverra sem malesuada in. Sed sodales dolor orci, vitae auctor massa molestie non. Duis ante libero, viverra quis scelerisque et, volutpat eget nisi. Nullam porta diam auctor fringilla fringilla. Integer eget dolor lacinia, lacinia nibh ultricies, volutpat velit. Vivamus efficitur ut neque sed accumsan. Suspendisse potenti. Pellentesque nibh metus, auctor eu convallis sit amet, volutpat at felis. Nam venenatis condimentum diam ut tristique. Pellentesque luctus tincidunt laoreet. Proin non tellus magna. Praesent at mi quam. Nam sit amet urna id lorem fermentum molestie. Etiam congue justo in mauris tincidunt tincidunt. Suspendisse dignissim dapibus nisi, quis euismod nisl volutpat vitae. Nunc lacinia gravida dui nec consequat.
+                </p>
+            </div>
+        </main>
+
+        <div>
+            <a style="padding-left: 20px" href="../index.html"><<< Return to main page</a>
+        </div>
+    </body>
+</html>
