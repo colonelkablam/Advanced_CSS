@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Page Layout Methods</title>
+        <style>
+            p {
+                padding: 0px;
+                margin: 0px;
+                font-weight: 700;
+            }
+
+            li {
+                list-style: none;
+            }
+
+            .container {
+                padding: 10px;
+                background-color: yellowgreen;
+                display: flex;
+                gap: 10px;            
+            }
+
+            .container > li {
+                flex-basis: 50px;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <div class="container">
+            <p>Page Layout Methods</p>
+
+            <li><a href="./Page-Layout-Methods/HTML-table.html">HTML Table</a></li>
+            <li><a href="./Page-Layout-Methods/inline-block.html">Inline-Block</a></li>
+            <li><a href="./Page-Layout-Methods/absolute-positioning.html">Absolute Positioning</a></li>
+            <li><a href="./Page-Layout-Methods/float.html">Float</a></li>
+            <li><a href="./Page-Layout-Methods/flexbox.html">Flexbox</a></li>
+
+        </div>
+
+        <footer>
+            <div>
+                <a style="padding-left: 20px" href="../index.html"><<< Return to main page</a>
+            </div>
+        </footer>
+    </body>
+</html>
